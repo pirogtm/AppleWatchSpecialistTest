@@ -41,7 +41,7 @@ class InterfaceController: WKInterfaceController {
                 session.sendMessage(["selectedDay" : weather.intervalString], replyHandler: { (response) in
                     print("Get answer from phone:\n\(response)")
                 }, errorHandler: { (error) in
-                    print("Error message sending:\n\(error)")
+                    print("Error message sending:\n\(error.localizedDescription)")
                 })
             }
             
